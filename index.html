@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svelte-web-components-starter</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <script type="module" src="/src/main.ts"></script>
+
+    <h1>Modal Web Component</h1>
+
+    <button commandfor="cookies" command="show-modal">
+      Cookie Preferences
+    </button>
+    <button commandfor="delete" command="show-modal">Delete Account</button>
+
+    <modal-example id="cookies" title="Cookie Preferences" open>
+      We use cookies to improve your experience. You can customize your
+      preferences below or accept the defaults to continue browsing.
+      <div slot="actions">
+        <button commandfor="cookies" command="close">Decline</button>
+        <button class="primary" commandfor="cookies" command="close">
+          Accept All
+        </button>
+      </div>
+    </modal-example>
+    <modal-example id="delete" title="Delete Account">
+      This action is permanent and cannot be undone. All your data, including
+      projects and settings, will be removed immediately.
+      <div slot="actions">
+        <button commandfor="delete" command="close">Cancel</button>
+        <button class="danger" commandfor="delete" command="close">
+          Delete Account
+        </button>
+      </div>
+    </modal-example>
+  </body>
+</html>

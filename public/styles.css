@@ -1,0 +1,54 @@
+body {
+    font-family: system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+    background: #fafafa;
+    color: #333;
+}
+h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+}
+
+/* Prevents the slot container element from being part of the layout */
+[slot] {
+    display: contents;
+}
+
+button {
+    font-family: system-ui, sans-serif;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    transition:
+        background 0.15s,
+        border-color 0.15s;
+}
+button:hover {
+    background: #f5f5f5;
+    border-color: #bbb;
+}
+button.primary {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+button.primary:hover {
+    background: #333;
+}
+button.danger {
+    background: #dc2626;
+    color: #fff;
+    border-color: #dc2626;
+}
+button.danger:hover {
+    background: #b91c1c;
+}
